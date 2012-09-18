@@ -8,10 +8,10 @@
 <script type="text/javascript" src="rightClick.js"></script>
 </head>
 
-<body onload="RightClick.init('customRightClick', 'flashcontent');">
+<body>
 	<div id="flashcontent">&nbsp;</div>
 	<script type="text/javascript">
-	
+
 		/**
 	    // for SWF Object 1.5 use legacy mode:
 
@@ -38,7 +38,9 @@
 		  name: "customRightClick"
 		};
 	
-		swfobject.embedSWF("RightClick.swf", "flashcontent", "560", "420", "9.0.0", "expressInstall.swf", {}, params, attributes);
+		swfobject.embedSWF("RightClick.swf", "flashcontent", "560", "420", "9.0.0", "expressInstall.swf", {}, params, attributes, function(e) { 
+			RightClick.init('customRightClick', 'flashcontent');
+		});
 
 	</script>
 </body>
