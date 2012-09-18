@@ -2,7 +2,8 @@ Latest changes and fixes, version history
 
 == v0.7.0 ==
 
-  * a011 : Fixes latest compatibility issues for Google Chrome browser (thanks to Jaroslav Danilov)
+  * a012 FEATURE: SWFObject 2.2 included by default
+  * a011 FIX: Fixes latest compatibility issues for Google Chrome browser (thanks to Jaroslav Danilov)
 
 == v0.6.3 ==
 

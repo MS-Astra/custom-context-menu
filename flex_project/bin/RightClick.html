@@ -11,8 +11,12 @@
 <body onload="RightClick.init('customRightClick', 'flashcontent');">
 	<div id="flashcontent">&nbsp;</div>
 	<script type="text/javascript">
-	   var so = new SWFObject("RightClick.swf", "customRightClick", "560", "420", "9", "#CCCCCC");
-		so.addParam("quality", "high");
+	
+		/**
+	    // for SWF Object 1.5 use legacy mode:
+
+	    var so = new SWFObject("RightClick.swf", "customRightClick", "560", "420", "9", "#CCCCCC");
+	    so.addParam("quality", "high");
 		so.addParam("name", "customRightClick");
 		so.addParam("id", "customRightClick");
 		so.addParam("AllowScriptAccess", "always");
@@ -20,6 +24,22 @@
 		so.addParam("menu", "false");
 		so.addVariable("variable1", "value1");
 		so.write("flashcontent");
+		
+	    */
+	   
+		var params = {
+		  wmode: "opaque",
+		  menu: "false",
+		  AllowScriptAccess: "always"
+		};
+
+		var attributes = {
+		  id: "customRightClick",
+		  name: "customRightClick"
+		};
+	
+		swfobject.embedSWF("RightClick.swf", "flashcontent", "560", "420", "9.0.0", "expressInstall.swf", {}, params, attributes);
+
 	</script>
 </body>
 </html>
